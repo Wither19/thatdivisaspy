@@ -51,3 +51,13 @@ text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
 			.weapon {
 				height:50px;
 				}
+
+.stickybutton {
+        font-family: 'TF2 Build', sans-serif;
+        transition:all 200ms;
+        position:sticky;
+        top:0;
+}
+.stickybutton:hover {
+        font-size:28px;
+}
