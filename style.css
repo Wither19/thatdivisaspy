@@ -1,0 +1,53 @@
+.box {
+		  font-family: 'TF2 Build', sans-serif;
+		  font-size: 60px;
+		  text-align: center;
+          background-color:	#A45A52;
+		  color: #f6eabe;
+		  border: inset 8px	#f6eabe;
+		  border-radius: 10px;
+		  margin: 10px auto 10px auto;
+		  width: 55%;
+  transition:background-color 200ms, color 200ms, transform 350ms, text-shadow 200ms, border 100ms;
+  Padding:5px;
+
+		  }
+		  .box:hover {
+			background-color: #367588;
+			color: #F5F5DC;
+			border: outset 12px #f5f5dc;
+			transform:translate(4px, 4px);
+text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
+     
+}
+			body {
+			background-image:url(https://images.gamebanana.com/img/ss/mods/6240b968b4197.jpg);
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			}
+			.emblem {
+				width:60px;
+				}
+				.boxsm {
+		  font-family: 'TF2 Build', sans-serif;
+		  font-size: 36px;
+		  text-align: center;
+          background-color:	#A45A52;
+		  color: #f6eabe;
+		  border: inset 8px	#f6eabe;
+		  border-radius: 10px;
+		  margin: 10px auto 10px auto;
+		  width: 65%;
+		  transition:background-color 200ms, color 200ms, transform 350ms, text-shadow 200ms, border 100ms;
+  padding:5px;
+		  }
+		  .boxsm:hover {
+			background-color: #367588;
+			color: #F5F5DC;
+			border: outset 12px #f5f5dc;
+			transform:translate(4px, 4px);
+     text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
+}
+			.weapon {
+				height:50px;
+				}
