@@ -73,11 +73,12 @@ img.portrait {
 		    width:180px;
 		    height:225px;
 	    }
-img.tideturner {
-	width:80px;
+img.tide-turner {
+	width:160px;
 	float:right;
-	transition: all 500ms;
+	transform:rotate(90deg);
+	transition: all 1.5s;
 }
-img.tideturner:hover {
-	transform:rotate(180deg);
+img.tide-turner:hover {
+	transform:rotate(450deg);
 }
