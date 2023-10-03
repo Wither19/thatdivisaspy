@@ -74,7 +74,7 @@ img.portrait {
 		    height:225px;
 	    }
 img.tide-turner {
-	width:160px;
+	width:240px;
 	float:right;
 	transform:rotate(90deg);
 	transition: all 1.5s;
