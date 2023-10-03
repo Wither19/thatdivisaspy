@@ -8,16 +8,15 @@
 		  border-radius: 10px;
 		  margin: 10px auto 10px auto;
 		  width: 55%;
-  transition:background-color 200ms, color 200ms, transform 350ms, text-shadow 200ms, border 100ms;
-  Padding:5px;
+		  transition:background-color 200ms, color 200ms, transform 350ms, filter 200ms, border 100ms;
+          padding:5px;
 
 		  }
 		  .box:hover {
 			background-color: #367588;
 			color: #F5F5DC;
-			border: outset 12px #f5f5dc;
-			transform:translate(4px, 4px);
-text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
+			transform:translate(0px, -8px);
+			filter:drop-shadow(10px 10px 4px #c8bf9e);
      
 }
 			body {
@@ -38,15 +37,14 @@ text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
 		  border-radius: 10px;
 		  margin: 10px auto 10px auto;
 		  width: 65%;
-		  transition:background-color 200ms, color 200ms, transform 350ms, text-shadow 200ms, border 100ms;
-  padding:5px;
+		  transition:background-color 200ms, color 200ms, transform 350ms, filter 200ms, border 100ms;
+		  padding:5px;
 		  }
 		  .boxsm:hover {
 			background-color: #367588;
 			color: #F5F5DC;
-			border: outset 12px #f5f5dc;
-			transform:translate(4px, 4px);
-     text-shadow: 12px 6px 6px rgba(200,191,158,0.6);
+			transform:translate(0px, -6px);
+			filter:drop-shadow(10px 10px 3px #c8bf9e);
 }
 			.weapon {
 				height:50px;
