@@ -75,11 +75,11 @@ img.portrait {
 	border:solid 1px;
 	    }
 img.tide-turner {
-	width:240px;
+	width:200px;
 	float:center;
 	transform:rotate(90deg);
 	transition: all 2s;
 }
 img.tide-turner:hover {
-	transform:rotate(900deg);
+	transform:rotate(810deg);
 }
