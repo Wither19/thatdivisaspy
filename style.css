@@ -70,15 +70,16 @@ a:visited {
 	color:inherit;
 }
 img.portrait {
-		    width:180px;
-		    height:225px;
+	width:180px;
+	height:225px;
+	border:solid 1px;
 	    }
 img.tide-turner {
 	width:240px;
-	float:right;
+	float:center;
 	transform:rotate(90deg);
-	transition: all 1.5s;
+	transition: all 2s;
 }
 img.tide-turner:hover {
-	transform:rotate(450deg);
+	transform:rotate(900deg);
 }
