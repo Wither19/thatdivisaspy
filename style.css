@@ -49,7 +49,9 @@
 			.weapon {
 				height:50px;
 				}
-
+.normal {
+	font-family:'Fira Sans', sans-serif;
+}
 .stickybutton {
         font-family: 'TF2 Build', sans-serif;
         transition:all 200ms;
