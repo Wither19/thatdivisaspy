@@ -6,7 +6,7 @@
                 
   <style>
     img {
-      transition:all 0.75s;
+      transition:all 0.5s;
       width:200px;
     }
     div {
@@ -14,46 +14,74 @@
       text-align:center;
       font-family:'TF2 Build',sans-serif;
     }
+    .box {
+		  font-family: 'TF2 Build', sans-serif;
+		  font-size: 60px;
+		  text-align: center;
+          background-color:	#A45A52;
+		  color: #f6eabe;
+		  border: inset 8px	#f6eabe;
+		  border-radius: 10px;
+		  margin: 10px auto 10px auto;
+		  width: 55%;
+		  transition:background-color 200ms, color 200ms, transform 350ms, filter 200ms, border 100ms;
+          padding:5px;
+
+		  }
+		  .box:hover {
+			background-color: #367588;
+			color: #F5F5DC;
+			transform:translate(0px, -8px);
+			filter:drop-shadow(10px 10px 4px #c8bf9e);
+}
+body {
+			background-image:url(https://images.gamebanana.com/img/ss/mods/6240b968b4197.jpg);
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			}
+img:hover {
+    transform:translate(0px, -8px);
+}
   </style>
 </head>
 <body>
-<div>Offense<br><img id="scout" 
+<div class="box">Offense<br><img id="scout" 
      onmouseover="document.getElementById('scout').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_BLU.png';"
-     onmouseout="document.getElementById('scout').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png'"
+     onmouseout="document.getElementById('scout').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png">
 <img id="soldier" 
      onmouseover="document.getElementById('soldier').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_BLU.png';"
-     onmouseout="document.getElementById('soldier').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.webp'"
+     onmouseout="document.getElementById('soldier').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.webp">
 <img id="pyro" 
      onmouseover="document.getElementById('pyro').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_BLU.png';"
-     onmouseout="document.getElementById('pyro').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.webp'"
+     onmouseout="document.getElementById('pyro').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.webp">
-     </div><div>Defense<br>
+     </div><div class="box">Defense<br>
      <img id="demo" 
      onmouseover="document.getElementById('demo').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_BLU.png';"
-     onmouseout="document.getElementById('demo').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.webp'"
+     onmouseout="document.getElementById('demo').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.webp">
      <img id="heavy" 
      onmouseover="document.getElementById('heavy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_BLU.png';"
-     onmouseout="document.getElementById('heavy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.webp'"
+     onmouseout="document.getElementById('heavy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.webp">
      <img id="engi" 
      onmouseover="document.getElementById('engi').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_BLU.png';"
-     onmouseout="document.getElementById('engi').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.webp'"
+     onmouseout="document.getElementById('engi').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.webp">
-     </div><div>Support<br>
+     </div><div class="box">Support<br>
      <img id="medic" 
      onmouseover="document.getElementById('medic').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_BLU.png';"
-     onmouseout="document.getElementById('medic').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.webp'"
+     onmouseout="document.getElementById('medic').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.webp">
      <img id="sniper" 
      onmouseover="document.getElementById('sniper').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_BLU.png';"
-     onmouseout="document.getElementById('sniper').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.webp'"
+     onmouseout="document.getElementById('sniper').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.webp">
      <img id="spy" 
      onmouseover="document.getElementById('spy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_BLU.png';"
-     onmouseout="document.getElementById('spy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.webp'"
+     onmouseout="document.getElementById('spy').src = 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.webp';"
      src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.webp">
      </div>
 </body>
