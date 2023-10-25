@@ -4,6 +4,7 @@
 <head>
   <link href="https://fonts.cdnfonts.com/css/tf2-build" rel="stylesheet">
   <link href="https://wither19.github.io/landing/rgb/style.css" rel="stylesheet">
+  <link href="https://wither19.github.io/thatdivisaspy/style.css" rel="stylesheet">
   <style>
     button {
       font-family: TF2 Build;
@@ -19,19 +20,39 @@
       color: var(-bluteamalt);
       transform: translate(4px, 4px);
     }
+    .locmarker {
+      height:50px;
+    }
   </style>
 </head>
 <body>
-<div><button id="scout" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png'">SCOUT</button>
-<button id="soldier" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.webp'">SOLDIER</button>
-<button id="pyro" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.webp'">PYRO</button></div>
-<div><button id="demo" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.webp'">DEMOMAN</button>
-<button id="heavy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.webp'">HEAVY</button>
-<button id="engi" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.webp'">ENGINEER</button></div>
-<div><button id="medic" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.webp'">MEDIC</button>
-<button id="sniper" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.webp'">SNIPER</button>
-<button id="spy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.webp'">SPY</button></div>
+<div><button id="scout" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Scout'; document.getElementById('classname').innerHTML = 'Real name: Jeremy'; document.getElementById('classage').innerHTML = 'Age: 27';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Boston, MA';">SCOUT</button>
+<button id="soldier" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Soldier'; document.getElementById('classname').innerHTML = 'Real name: Jane Doe'; document.getElementById('classage').innerHTML = 'Age: ???';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Midwest US';">SOLDIER</button>
+<button id="pyro" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Pyro'; document.getElementById('classname').innerHTML = 'Real name: ???'; document.getElementById('classage').innerHTML = 'Age: ???';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> ???';">PYRO</button></div>
+<div><button id="demo" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Demoman'; document.getElementById('classname').innerHTML = 'Real name: Tavish Finnegan DeGroot'; document.getElementById('classage').innerHTML = 'Age: ~40';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Ullapool, Scotland';">DEMOMAN</button>
+<button id="heavy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Heavy'; document.getElementById('classname').innerHTML = 'Real name: Mikhail'; document.getElementById('classage').innerHTML = 'Age: ~50';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Siberia, USSR';">HEAVY</button>
+<button id="engi" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Engineer'; document.getElementById('classname').innerHTML = 'Real name: Dell Conagher'; document.getElementById('classage').innerHTML = 'Age: ~30';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Bee Cave, TX';">ENGINEER</button></div>
+<div><button id="medic" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Medic'; document.getElementById('classname').innerHTML = 'Real name: Ludwig'; document.getElementById('classage').innerHTML = 'Age: ???';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Stuttgart, Germany';">MEDIC</button>
+<button id="sniper" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Sniper'; document.getElementById('classname').innerHTML = 'Real name: Mick Mundy'; document.getElementById('classage').innerHTML = 'Age: ???';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> Australia';">SNIPER</button>
+<button id="spy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.webp'; document.getElementById('meettheclass').innerHTML = 'Meet The Spy'; document.getElementById('classname').innerHTML = 'Real name: ???'; document.getElementById('classage').innerHTML = 'Age: ???';
+document.getElementById('classresidence').innerHTML = '<img src= 'https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/mapmarker.svg' class='locmarker'> ???';">SPY</button></div>
 <br style="height: 200px;">
 <center><img id="classimg" style="height: 270px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/1200px-Question_Mark.svg.png"></center>
+<br>
+<div class="box" id="meettheclass">???</div>
+<br>
+<div class="box" id="classname">???</div>
+<br>
+<div class="box" id="classage">???</div>
+<br>
+<div class="box" id="classresidence">???</div>
 </body>
 </html>
