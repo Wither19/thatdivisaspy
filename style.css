@@ -10,6 +10,10 @@
         --bluegradienthovered: 2px 2px #ffffff, 4px 4px #ccccff, 6px 6px #9999ff, 8px 8px #6666ff, 10px 10px #3333ff, 12px 12px #0000ff, 14px 14px #0000cc, 16px 16px #000099, 18px 18px #000066, 20px 20px #000033;
         --greengradienthovered: 2px 2px #ffffff, 4px 4px #ccffcc, 6px 6px #99ff99, 8px 8px #66ff66, 10px 10px #33ff33, 12px 12px #00ff00, 14px 14px #00cc00, 16px 16px #009900, 18px 18px #006600, 20px 20px #003300;
     }
+.box h1 {
+   font-size: 36px;
+   font-weight: 400;
+}
 button {
       font-family: TF2 Build;
       background-color: var(--redteam);
