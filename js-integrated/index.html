@@ -2,6 +2,8 @@
 
   <link href="https://fonts.cdnfonts.com/css/tf2-build" rel="stylesheet">
   <link href="https://wither19.github.io/thatdivisaspy/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <style>
     body {
       background-position: right;
@@ -15,84 +17,36 @@
       color: var(--redteamalt);
     }
   </style>
-<style type="text/css" id="operaUserStyle"></style></head>
+<style type="text/css" id="operaUserStyle">
+  video {
+    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.25 calc(env(-opera-gx-accent-color-r)/255) calc(env(-opera-gx-accent-color-g)/255) calc(env(-opera-gx-accent-color-b)/255)));
+  }
+</style></head>
 <body>
-<audio id="bgm" onplay="document.getElementById('bgm').volume = '0.2';" style="display: none;" controls autoplay>
+<audio id="bgm" onplay="document.getElementById('bgm').volume = '0.2';" style="display: none;" controls="" autoplay="">
     <source src="https://github.com/Wither19/thatdivisaspy/blob/main/docs/assets/redtriumphs.ogg?raw=true" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
-<div><button id="scout" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Scout'; document.getElementById('classname').innerHTML = 'Real name: Jeremy'; document.getElementById('classage').innerHTML = 'Age: 27';
-document.getElementById('classresidence').innerHTML = 'Boston, MA';
-document.getElementById('primary').innerHTML = 'Scattergun';
-document.getElementById('secondary').innerHTML = 'Pistol';
-document.getElementById('melee').innerHTML = 'Bat';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">SCOUT</button>
-<button id="soldier" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Soldier'; document.getElementById('classname').innerHTML = 'Real name: Jane Doe'; document.getElementById('classage').innerHTML = 'Age: ???';
-document.getElementById('classresidence').innerHTML = 'Midwest US';
-document.getElementById('primary').innerHTML = 'Rocket Launcher';
-document.getElementById('secondary').innerHTML = 'Shotgun';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';
-document.getElementById('melee').innerHTML = 'Shovel';">SOLDIER</button>
-<button id="pyro" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Pyro'; document.getElementById('classname').innerHTML = 'Real name: ???'; document.getElementById('classage').innerHTML = 'Age: ???';
-document.getElementById('classresidence').innerHTML = '???';
-document.getElementById('primary').innerHTML = 'Flamethrower';
-document.getElementById('secondary').innerHTML = 'Shotgun';
-document.getElementById('melee').innerHTML = 'Fire Axe';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">PYRO</button></div>
-<div><button id="demo" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Demoman'; document.getElementById('classname').innerHTML = 'Real name: Tavish Finnegan DeGroot'; document.getElementById('classage').innerHTML = 'Age: ~40';
-document.getElementById('classresidence').innerHTML = 'Ullapool, Scotland';
-document.getElementById('primary').innerHTML = 'Pipe Bomb Launcher';
-document.getElementById('secondary').innerHTML = 'Stickybomb Launcher';
-document.getElementById('melee').innerHTML = 'Bottle';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">DEMOMAN</button>
-<button id="heavy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Heavy'; document.getElementById('classname').innerHTML = 'Real name: Mikhail'; document.getElementById('classage').innerHTML = 'Age: ~50';
-document.getElementById('classresidence').innerHTML = 'Siberia, USSR';
-document.getElementById('primary').innerHTML = 'Minigun';
-document.getElementById('secondary').innerHTML = 'Shotgun';
-document.getElementById('melee').innerHTML = 'Fists';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">HEAVY</button>
-<button id="engi" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Engineer'; document.getElementById('classname').innerHTML = 'Real name: Dell Conagher'; document.getElementById('classage').innerHTML = 'Age: ~30';
-document.getElementById('classresidence').innerHTML = 'Bee Cave, TX';
-document.getElementById('primary').innerHTML = 'Shotgun';
-document.getElementById('secondary').innerHTML = 'Pistol';
-document.getElementById('melee').innerHTML = 'Wrench';
-document.getElementById('pda1').style.display = 'block';
-document.getElementById('pda2').style.display = 'block';
-document.getElementById('pda1').innerHTML = 'Construction PDA';
-document.getElementById('pda2').innerHTML = 'Destruction PDA';">ENGINEER</button></div>
-<div><button id="medic" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Medic'; document.getElementById('classname').innerHTML = 'Real name: Ludwig'; document.getElementById('classage').innerHTML = 'Age: ???';
-document.getElementById('classresidence').innerHTML = 'Stuttgart, Germany';
-document.getElementById('primary').innerHTML = 'Syringe Gun';
-document.getElementById('secondary').innerHTML = 'Medigun';
-document.getElementById('melee').innerHTML = 'Bonesaw';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">MEDIC</button>
-<button id="sniper" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Sniper'; document.getElementById('classname').innerHTML = 'Real name: Mick Mundy'; document.getElementById('classage').innerHTML = 'Age: ???';
-document.getElementById('classresidence').innerHTML = 'Australia';
-document.getElementById('primary').innerHTML = 'Sniper Rifle';
-document.getElementById('secondary').innerHTML = 'SMG';
-document.getElementById('melee').innerHTML = 'Kukri';
-document.getElementById('pda1').style.display = 'none';
-document.getElementById('pda2').style.display = 'none';">SNIPER</button>
-<button id="spy" onclick="document.getElementById('classimg').src ='https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.png'; document.getElementById('meettheclass').innerHTML = 'Meet The Spy'; document.getElementById('classname').innerHTML = 'Real name: ???'; document.getElementById('classage').innerHTML = 'Age: ???';
-document.getElementById('classresidence').innerHTML = '???';
-document.getElementById('primary').innerHTML = 'Revolver';
-document.getElementById('secondary').innerHTML = 'Sapper';
-document.getElementById('melee').innerHTML = 'Knife';
-document.getElementById('pda1').style.display = 'block';
-document.getElementById('pda2').style.display = 'block';
-document.getElementById('pda1').innerHTML = 'Invis Watch';
-document.getElementById('pda2').innerHTML = 'Disguise Kit';">SPY</button></div>
+<div>
+<button id="scout">SCOUT</button>
+<button id="soldier">SOLDIER</button>
+<button id="pyro">PYRO</button>
+</div>
+<div>
+<button id="demo">DEMOMAN</button>
+<button id="heavy">HEAVY</button>
+<button id="engi">ENGINEER</button>
+</div>
+<div>
+<button id="medic">MEDIC</button>
+<button id="sniper">SNIPER</button>
+<button id="spy">SPY</button>
+</div>
 <center><a href="https://wither19.github.io/thatdivisaspy/js-integrated/blu"><button id="blu"><img style="width: 150px;" src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/BLU.png"></button></a></center>
 <br style="height: 200px;">
 <center><img id="classimg" style="height: 270px" src="https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png"></center>
 <br>
-<div class="box" id="meettheclass">Meet The Scout</div>
+<div class="box" id="meet">Meet The Scout</div>
 <br>
 <div class="box" id="classname">Real name: Jeremy</div>
 <br>
@@ -103,4 +57,110 @@ document.getElementById('pda2').innerHTML = 'Disguise Kit';">SPY</button></div>
 
 
 
-<div class="box" id="stats">Stats<br><br><h1>Health: <span id="health">125</span><br><br></h1><br></div><div class="box">Weapons<span id="weapons"><ul style="line-height: 200%;"><li id="primary">Scattergun</li><li id="secondary">Pistol</li><li id="melee">Bat</li><li style="display: none;" id="pda1">???</li><li style="display: none;" id="pda2">???</li></ul></span></div></body></html>
+<div class="box" id="stats">Stats<br><br><h1>Health: <span id="health">125</span><br><br></h1><br></div><div class="box">Weapons<span id="weapons"><ul style="line-height: 200%;"><li id="primary">Scattergun</li><li id="secondary">Pistol</li><li id="melee">Bat</li><li style="display: none;" id="pda1">Invis Watch</li><li style="display: none;" id="pda2">Disguise Kit</li></ul></span></div>
+<script>
+    $("#scout").click(function(){
+       $("#meet").html("Meet The Scout");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Scout_RED.png");
+       $("#classname").html("Real Name: Jeremy");
+       $("#classage").html("Age: 27");
+       $("#classresidence").html("Boston, MA");
+       $("#primary").html("Scattergun");
+       $("#secondary").html("Pistol");
+       $("#melee").html("Bat");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#soldier").click(function(){
+        $("#meet").html("Meet The Soldier");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Soldier.png");
+       $("#classname").html("Real Name: Jane Doe");
+       $("#classage").html("Age: ~50");
+       $("#classresidence").html("Midwestern US");
+       $("#primary").html("Rocket Launcher");
+       $("#secondary").html("Shotgun");
+       $("#melee").html("Shovel");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#pyro").click(function(){
+        $("#meet").html("Meet The Pyro");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Pyro_RED.png");
+       $("#classname").html("Real Name: ???");
+       $("#classage").html("Age: ???");
+       $("#classresidence").html("???");
+       $("#primary").html("Flamethrower");
+       $("#secondary").html("Shotgun");
+       $("#melee").html("Fire Axe");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#demo").click(function(){
+        $("#meet").html("Meet The Demoman");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Demoman_RED.png");
+       $("#classname").html("Real Name: Tavish Finnegan DeGroot");
+       $("#classage").html("Age: ~40");
+       $("#classresidence").html("Ullapool, Scotland");
+       $("#primary").html("Pipe Bomb Launcher");
+       $("#secondary").html("Stickybomb Launcher");
+       $("#melee").html("Bottle");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#heavy").click(function(){
+        $("#meet").html("Meet The Heavy");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Heavy_RED.png");
+       $("#classname").html("Real Name: Mikhail");
+       $("#classage").html("Age: ~50");
+       $("#classresidence").html("Siberia, USSR");
+       $("#primary").html("Minigun");
+       $("#secondary").html("Shotgun");
+       $("#melee").html("Fists");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#engi").click(function(){
+        $("#meet").html("Meet The Engineer");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Engineer_RED.png");
+       $("#classname").html("Real Name: Dell Conagher");
+       $("#classage").html("Age: ~40");
+       $("#classresidence").html("Bee Cave, TX");
+       $("#primary").html("Shotgun");
+       $("#secondary").html("Pistol");
+       $("#melee").html("Wrench");
+       $("#pda1, #pda2").css({"display": "block"});
+       $("#pda1").html("Construction PDA");
+       $("#pda2").html("Destruction PDA");
+    });
+    $("#medic").click(function(){
+        $("#meet").html("Meet The Medic");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Medic_RED.png");
+       $("#classname").html("Real Name: Ludwig");
+       $("#classage").html("Age: ???");
+       $("#classresidence").html("Stuttgart, Germany");
+       $("#primary").html("Syringe Gun");
+       $("#secondary").html("Medigun");
+       $("#melee").html("Bonesaw");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#sniper").click(function(){
+        $("#meet").html("Meet The Sniper");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Sniper_RED.png");
+       $("#classname").html("Real Name: Mick Mundy");
+       $("#classage").html("Age: ???");
+       $("#classresidence").html("Australia");
+       $("#primary").html("Sniper Rifle");
+       $("#secondary").html("SMG");
+       $("#melee").html("Kukri");
+       $("#pda1, #pda2").css({"display": "none"});
+    });
+    $("#spy").click(function(){
+        $("#meet").html("Meet The Spy");
+       $("#classimg").attr("src", "https://raw.githubusercontent.com/Wither19/thatdivisaspy/main/docs/assets/images/Spy_RED.png");
+       $("#classname").html("Real Name: ???");
+       $("#classage").html("Age: ???");
+       $("#classresidence").html("France");
+       $("#primary").html("Revolver");
+       $("#secondary").html("Sapper");
+       $("#melee").html("Knife");
+       $("#pda1, #pda2").css({"display": "block"});
+       $("#pda1").html("Invis Watch");
+       $("#pda2").html("Disguise Kit");
+    });
+</script>
+</body></html>
